@@ -9,6 +9,7 @@
 | Data | Versão | Descrição | Autor |
 | :--- | :--- | :--- | :--- |
 | 17/05/2026 | 1.0 | Elaboração inicial dos requisitos funcionais baseada na Visão da Demanda e RNs. | Grupo CMD |
+| 19/05/2026 | 1.1 | Sincronização de termos e atores com o Documento de Visão (v1.3). | Grupo CMD |
 
 ---
 
@@ -23,12 +24,12 @@
 
 ### RF02 - Inativar Ativo
 
-* **Descrição:** O sistema deve permitir a inativação de ativos que não estejam em uso (extravio, manutenção ou baixa definitiva).
+* **Descrição:** O sistema deve permitir que o **Administrador** realize a inativação de ativos que não estejam em uso (extravio, manutenção ou baixa definitiva).
 * **Requisito de Fluxo:** Exigir justificativa textual e registrar data/hora.
 * **Regras Relacionadas:** RN08 (Justificativa de Inativação).
 * **Origem:** VD F1.4.
 
-### RF03 - Consultar Histórico de Alterações de Cadastro
+### RF03 - Consultar Histórico de Cadastro
 
 * **Descrição:** O sistema deve disponibilizar ao **Administrador** um log de todas as alterações realizadas nos dados cadastrais dos ativos para fins de auditoria.
 * **Origem:** VD F1.5.
@@ -40,15 +41,13 @@
 ### RF04 - Solicitar Reserva de Ativos
 
 * **Descrição:** O sistema deve permitir que o **Professor** selecione ativos disponíveis e solicite uma reserva para um determinado horário/sala.
-* **Restrição:** Verificar se o usuário possui pendências de devolução.
-* **Regras Relacionadas:** RN02 (Bloqueio de Usuários Inadimplentes).
 * **Origem:** VD F2.1.
 
-### RF05 - Confirmar Retirada de Ativo (Locação)
+### RF05 - Confirmar Locação
 
 * **Descrição:** O sistema deve permitir que o **Atendente** confirme a entrega dos ativos ao professor mediante a conferência dos itens.
-* **Ação Crítica:** Coletar o aceite digital do Termo de Responsabilidade.
-* **Regras Relacionadas:** RN01 (Aceite de Termo de Responsabilidade).
+* **Ação Crítica:** Validar pendências de devolução do Professor e coletar o aceite digital do Termo de Responsabilidade.
+* **Regras Relacionadas:** RN01 (Aceite de Termo de Responsabilidade), RN02 (Bloqueio de Usuários Inadimplentes).
 * **Origem:** VD F2.2.
 
 ### RF06 - Transferir Ativo entre Professores
@@ -69,7 +68,7 @@
 * **Regras Relacionadas:** RN05 (Checklist de Avarias), RN06 (Baixa Automática).
 * **Origem:** VD F3.1.
 
-### RF08 - Consultar Histórico de Movimentações
+### RF08 - Auditar Movimentações
 
 * **Descrição:** O sistema deve permitir que o **Administrador** visualize o rastro completo de um ativo: quem locou, quando transferiu e quem devolveu (com estado de conservação).
 * **Origem:** VD F2.4, F3.2.

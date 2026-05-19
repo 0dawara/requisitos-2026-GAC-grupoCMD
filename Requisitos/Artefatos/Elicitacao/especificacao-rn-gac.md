@@ -6,7 +6,8 @@ Este documento descreve as regras que regem os processos de gestão de ativos do
 
 | Data | Versão | Descrição | Autor |
 | :--- | :--- | :--- | :--- |
-| 19/05/2026 | 1.0 | Elaboração inicial das regras de negócio do GAC. | Gemini CLI |
+| 19/05/2026 | 1.0 | Elaboração inicial das regras de negócio do GAC. | Grupo CMD |
+| 19/05/2026 | 1.1 | Sincronização de atores com o Documento de Visão (v1.3). | Grupo CMD |
 
 ---
 
@@ -38,7 +39,7 @@ Este documento descreve as regras que regem os processos de gestão de ativos do
 
 ### RN05 - Conferência Obrigatória de Avarias
 * **Identificador:** RN05 - Atendente registra estado físico na devolução.
-* **Descrição:** Todo processo de devolução exige o preenchimento de um checklist de integridade. Caso existam avarias não registradas previamente, o sistema deve gerar um alerta automático para a Coordenação (Administrador).
+* **Descrição:** Todo processo de devolução exige o preenchimento de um checklist de integridade. Caso existam avarias não registradas previamente, o sistema deve gerar um alerta automático para a **Administrador**.
 
 ### RN06 - Baixa Automática de Responsabilidade
 * **Identificador:** RN06 - Sistema encerra vínculo após confirmação da devolução.
