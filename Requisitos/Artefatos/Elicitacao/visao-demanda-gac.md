@@ -5,9 +5,7 @@
 | Data | Versão | Descrição | Autor |
 | :--- | :--- | :--- | :--- |
 | 04/05/2026 | 1.0 | Criação inicial do Documento de Visão para o projeto GAC. | Grupo CMD |
-| 18/05/2026 | 1.1 | Revisão da Visão de Demanda com base no feedback do Product Owner. | Grupo CMD |
-| 19/05/2026 | 1.2 | Inclusão de diagramas UML (Mermaid) e refinamento de atores/stakeholders. | Grupo CMD |
-| 20/05/2026 | 1.3 | Sincronização com o template oficial LAPIS e inclusão do Diagrama de Implantação. | Grupo CMD |
+| 18/05/2026 | 1.1 | Revisão da Visão de Demanda. | Grupo CMD |
 
 ## 1. Objetivo
 
