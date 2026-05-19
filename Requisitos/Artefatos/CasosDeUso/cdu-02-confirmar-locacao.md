@@ -48,8 +48,9 @@ Professor
 
 ### A1. Locação Expressa (Sem Reserva Prévia)
 #### A1.1 No passo P1, o Atendente seleciona "Nova Locação Direta".
-#### A1.2 O Atendente seleciona o Professor e escaneia os ativos.
-#### A1.3 O sistema segue para o passo P5.
+#### A1.2 O Atendente seleciona o Professor e o sistema valida se o Professor possui pendências de devolução.
+#### A1.3 O Atendente escaneia os ativos.
+#### A1.4 O sistema segue para o passo P5.
 
 ## 8. Fluxos de Exceção
 

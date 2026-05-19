@@ -31,7 +31,6 @@ Não se aplica
 ## 5. Precondições
 
 * O Professor deve estar logado no sistema.
-* O Professor não pode possuir pendências de devolução (bloqueio de inadimplentes).
 
 ## 6. Fluxo Principal
 
