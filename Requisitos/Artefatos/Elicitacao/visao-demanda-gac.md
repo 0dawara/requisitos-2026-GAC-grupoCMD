@@ -6,6 +6,8 @@
 | :--- | :--- | :--- | :--- |
 | 04/05/2026 | 1.0 | Criação inicial do Documento de Visão para o projeto GAC. | Grupo CMD |
 | 18/05/2026 | 1.1 | Revisão da Visão de Demanda com base no feedback do Product Owner. | Grupo CMD |
+| 19/05/2026 | 1.2 | Inclusão de diagramas UML (Mermaid) e refinamento de atores/stakeholders. | Gemini CLI |
+| 20/05/2026 | 1.3 | Sincronização com o template oficial LAPIS e inclusão do Diagrama de Implantação. | Gemini CLI |
 
 ## 1. Objetivo
 
@@ -38,9 +40,9 @@ A demanda consiste em um sistema digital que permitirá:
 | **Diretoria do CCT** | Cliente | Segurança e responsabilização institucional do patrimônio. | Diretor do CCT |
 | **Professor** | Usuário final | Locar, utilizar e devolver o(s) ativo(s). | Professores CCT |
 | **Atendentes** | Usuário chave | Validar movimentações (entrega/devolução) e realizar checklists de avarias. | Secretaria do CCT |
-| **Coordenação / Admin.** | Stakeholder | Monitorar o inventário, processos e relatórios operacionais. | Coord. do CCT |
+| **Administrador (Coordenação)** | Stakeholder / Persona | Monitorar o inventário, processos e relatórios operacionais. Gerenciar o cadastro de ativos. | Coord. do CCT |
 | **Setor de Patrimônio** | Stakeholder | Controle inicial da origem e identificação global da Unifor. | Setor Central |
-| **Equipe de TI / Grupo CMD** | Desenvolvimento | Projetar, implementar e manter a segurança e usabilidade da plataforma. | Grupo CMD |
+| **Equipe de TI / Grupo CMD** | Desenvolvimento | Projetar, implementar e manter a plataforma. | Grupo CMD |
 | **Jurídico Institucional** | Stakeholder Consultivo | Validadores da legalidade do Termo de Responsabilidade Eletrônico e assinaturas digitais. | Jurídico Unifor |
 
 ## 5. Personas
@@ -48,40 +50,37 @@ A demanda consiste em um sistema digital que permitirá:
 ### 5.1. Professor
 
 * **Descrição:** Docente do CCT que precisa locar projetores, chaves e acessórios para ministrar suas aulas. Possui grande pressão de tempo entre turnos.
-* **Objetivo:** Retirar ativos rapidamente, assumindo a responsabilidade oficial sem burocracias demoradas, quando necessário transferir essa responsabilidade para o próximo professor e devolver o(s) ativo(s) no prazo estipulado.
+* **Objetivo:** Retirar ativos rapidamente, assumindo a responsabilidade oficial sem burocracias demoradas, transferir responsabilidade para o próximo professor e devolver ativos no prazo.
 
 ### 5.2. Atendente
 
 * **Descrição:** Funcionário administrativo que interage com os professores para realizar as movimentações de equipamentos.
 * **Objetivo:** Validar as movimentações e garantir o registro correto de avarias e a conferência de itens do kit na devolução.
 
-### 5.3. Administrador
+### 5.3. Administrador (Coordenação)
 
-* **Descrição:** Responsável pela gestão dos recursos físicos do centro.
-* **Objetivo:** Gerenciar o cadastro de ativos (projetores, cabos e chaves) e consultar o histórico de movimentações.
+* **Descrição:** Responsável pela gestão estratégica e operacional dos recursos físicos do centro.
+* **Objetivo:** Gerenciar o cadastro de ativos, monitorar o ciclo de vida dos equipamentos e realizar auditorias através do histórico de movimentações.
 
 ## 6. Necessidades e Funcionalidades
 
 ### Necessidade 1: Cadastro de Ativos
 
 #### F1.1 CRUD de Projetores
-
-* **Descrição:** Cadastro, consulta, atualização e exclusão de projetores com seus dados: número de patrimônio, Tag NFC e QR Code.
+* **Descrição:** Cadastro, consulta, atualização e exclusão de projetores com número de patrimônio, Tag NFC e QR Code.
 * **Incluída:** Sim.
 * **Atores:** Administrador.
 * **Frequência:** Baixa.
 * **Valor:** Alto.
 
 #### F1.2 CRUD de Cabos
-
-* **Descrição:** Cadastro, consulta, atualização e exclusão de cabos com seus dados: número de patrimônio, tipo, Tag NFC e QR Code.
+* **Descrição:** Cadastro, consulta, atualização e exclusão de cabos com número de patrimônio, tipo, Tag NFC e QR Code.
 * **Incluída:** Sim.
 * **Atores:** Administrador.
 * **Frequência:** Baixa.
 * **Valor:** Alto.
 
 #### F1.3 CRUD de Chaves
-
 * **Descrição:** Cadastro, consulta, atualização e exclusão de chaves com sua respectiva sala, Tag NFC e QR Code.
 * **Incluída:** Sim.
 * **Atores:** Administrador.
@@ -89,78 +88,69 @@ A demanda consiste em um sistema digital que permitirá:
 * **Valor:** Alto.
 
 #### F1.4 Inativação de Ativos
-
 * **Descrição:** Inativação de projetores, cabos e chaves.
 * **Incluída:** Sim.
 * **Atores:** Administrador.
 * **Frequência:** Baixa.
 * **Valor:** Alto.
 
-#### F1.5 Histórico do Cadastro de Ativos
-
-* **Descrição:** Registro do histórico de movimentações do cadastro de projetores, cabos e chaves.
+#### F1.5 Consulta ao Histórico de Cadastro
+* **Descrição:** Permite ao administrador auditar as alterações realizadas nos cadastros de ativos.
 * **Incluída:** Sim.
-* **Atores:** Sistema.
+* **Atores:** Administrador.
 * **Frequência:** Média.
 * **Valor:** Alto.
 
 ### Necessidade 2: Locação Ágil e Segura
 
 #### F2.1 Reserva Ágil de Ativos
-
-* **Descrição:** Solicitação de reserva de ativos feita pelo professor através do sistema, com preenchimento de informações necessárias para a reserva.
+* **Descrição:** Solicitação de reserva de ativos feita pelo professor através do sistema.
 * **Incluída:** Sim.
 * **Atores:** Professor.
 * **Frequência:** Alta.
 * **Valor:** Alto.
 
 #### F2.2 Confirmação de Locação
-
-* **Descrição:** Confirmação de locação feita pelo atendente através do sistema, com conferência de todos os itens do kit e aprovação da locação na retirada.
+* **Descrição:** Confirmação de locação feita pelo atendente, com conferência do kit e aprovação na retirada.
 * **Incluída:** Sim.
 * **Atores:** Atendente.
 * **Frequência:** Alta.
 * **Valor:** Alto.
 
 #### F2.3 Transferência de Ativos entre Professores
-
-* **Descrição:** Permite a transferência de ativos de um professor para outro no sistema, mantendo a rastreabilidade, através da leitura dos QR Codes ou Tags NFC.
+* **Descrição:** Permite a transferência direta entre professores via QR Code/NFC, mantendo a rastreabilidade.
 * **Incluída:** Sim.
 * **Atores:** Professor.
 * **Frequência:** Baixa.
 * **Valor:** Alto.
 
-#### F2.4 Histórico de Locação de Ativos
-
-* **Descrição:** Registro do histórico de locação de ativos.
+#### F2.4 Auditoria de Histórico de Locação
+* **Descrição:** Consulta ao histórico completo de quem utilizou cada ativo.
 * **Incluída:** Sim.
-* **Atores:** Sistema.
+* **Atores:** Administrador.
 * **Frequência:** Alta.
 * **Valor:** Alto.
 
 ### Necessidade 3: Devolução de Ativos
 
-#### F3.1 Devolução de Ativos
-
-* **Descrição:** Permite o registro de devolução do(s) ativo(s) pelo atendente após a conferência do(s) mesmo(s).
+#### F3.1 Registro de Devolução
+* **Descrição:** Registro de devolução pelo atendente após conferência física.
 * **Incluída:** Sim.
 * **Atores:** Atendente.
 * **Frequência:** Alta.
 * **Valor:** Alto.
 
-#### F3.2 Histórico de Devolução de Ativos
-
-* **Descrição:** Registro do histórico de devolução de ativos.
+#### F3.2 Auditoria de Histórico de Devolução
+* **Descrição:** Consulta ao registro de quando e em que estado o ativo foi devolvido.
 * **Incluída:** Sim.
-* **Atores:** Sistema.
+* **Atores:** Administrador.
 * **Frequência:** Alta.
 * **Valor:** Alto.
 
 ### Necessidade 4: Notificações e Monitoramento
 
 #### F4.1 Alertas e Notificações
-
-* **Descrição:** Geração de lembretes sobre atrasos de devolução e notificações de transferência para os atores vinculados ao(s) ativo(s).
+* **Descrição:** Lembretes de atraso e notificações de transferência.
 * **Incluída:** Sim.
 * **Atores:** Atendente e Professor.
 * **Frequência:** Média.
@@ -168,46 +158,84 @@ A demanda consiste em um sistema digital que permitirá:
 
 ## 7. Arquitetura da Demanda
 
-A plataforma GAC baseia-se num ecossistema composto por 4 camadas principais:
+### 7.1. Diagramas UML
 
-### 1. Identificadores Físicos
+#### 7.1.1. Diagrama de Casos de Uso
 
-* Tags NFC
-* QR Codes
+Ilustra os atores (usuários e sistemas externos) e as interações principais com a solução.
 
-### 2. Frontend Mobile
+```mermaid
+useCaseDiagram
+    actor "Professor" as P
+    actor "Atendente" as AT
+    actor "Administrador" as AD
+    
+    package "GAC - Gestão de Ativos" {
+        usecase "Solicitar Reserva" as UC1
+        usecase "Confirmar Locação" as UC2
+        usecase "Transferir Ativo" as UC3
+        usecase "Registrar Devolução" as UC4
+        usecase "Gerenciar Ativos" as UC5
+        usecase "Auditar Movimentações" as UC6
+    }
+    
+    P --> UC1
+    P --> UC3
+    AT --> UC2
+    AT --> UC4
+    AD --> UC5
+    AD --> UC6
+```
 
-* Acesso via smartphone (Android ou iOS)
-* Acesso para ambos usuários
-* Solicitação de locação
-* Devolução de ativos
-* Transferência de ativos
-* Histórico de locação de ativos
-* Alertas e notificações
-* Histórico de devolução de ativos
-* Histórico do cadastro de ativos
+#### 7.1.2. Diagrama de Componentes
 
-### 3. Frontend Web
+Descreve os principais componentes do sistema e suas dependências.
 
-* Acesso via navegador web
-* Cadastro de ativos
-* Inativação de ativos
-* Histórico do cadastro de ativos
-* Confirmação de locação
-* Devolução de ativos
-* Alertas e notificações
-* Histórico de devolução de ativos
-* Histórico de locação de ativos
+```mermaid
+componentDiagram
+    component "Frontend Mobile (App)" as FM
+    component "Frontend Web (Dashboard)" as FW
+    component "Backend API (Express/Node)" as API
+    database "Banco de Dados (PostgreSQL)" as DB
+    
+    FM ..> API : REST/JSON
+    FW ..> API : REST/JSON
+    API ..> DB : SQL
+```
 
-### 4. Backend
+#### 7.1.3. Diagrama de Implantação
 
-* Módulo de autenticação
-* Módulo de gerenciamento de usuários
-* Módulo de cadastro de ativos
-* Módulo de locação de ativos
-* Módulo de devolução de ativos
-* Módulo de transferência de ativos
-* Módulo de alertas e notificações
+Mostra como os componentes serão distribuídos nos ambientes de execução.
+
+```mermaid
+deploymentDiagram
+    node "Smartphone Professor/Atendente" as SP {
+        artifact "GAC Mobile App"
+    }
+    
+    node "Workstation Administrativa" as WA {
+        node "Navegador Web" {
+            artifact "GAC Dashboard"
+        }
+    }
+    
+    node "Servidor de Nuvem (Cloud)" as CS {
+        node "Container App" {
+            artifact "Backend API"
+        }
+        node "Container DB" {
+            artifact "PostgreSQL Instance"
+        }
+    }
+    
+    node "Equipamento Físico" as EF {
+        artifact "Tag NFC / QR Code"
+    }
+    
+    SP -- CS : HTTPS / WiFi-Unifor
+    WA -- CS : HTTPS / Rede Unifor
+    SP -- EF : NFC / Leitura Visual
+```
 
 ---
 
@@ -219,5 +247,5 @@ A plataforma GAC baseia-se num ecossistema composto por 4 camadas principais:
 * [x] Existem pelo menos duas personas descritas?
 * [x] Todas as necessidades e funcionalidades estão relacionadas a atores?
 * [x] Há indicação de valor e frequência para cada funcionalidade?
-* [x] A arquitetura está ilustrada (mesmo que de forma simples)?
+* [x] A arquitetura está ilustrada (Casos de Uso, Componentes e Implantação)?
 * [x] O documento está escrito em linguagem clara e objetiva?
