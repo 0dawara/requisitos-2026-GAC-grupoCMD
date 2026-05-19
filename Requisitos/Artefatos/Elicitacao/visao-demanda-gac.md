@@ -40,7 +40,7 @@ A demanda consiste em um sistema digital que permitirá:
 | **Diretoria do CCT** | Cliente | Segurança e responsabilização institucional do patrimônio. | Diretor do CCT |
 | **Professor** | Usuário final | Locar, utilizar e devolver o(s) ativo(s). | Professores CCT |
 | **Atendentes** | Usuário chave | Validar movimentações (entrega/devolução) e realizar checklists de avarias. | Secretaria do CCT |
-| **Administrador (Coordenação)** | Stakeholder / Persona | Monitorar o inventário, processos e relatórios operacionais. Gerenciar o cadastro de ativos. | Coord. do CCT |
+| **Administrador** | Stakeholder / Persona | Monitorar o inventário, processos e relatórios operacionais. Gerenciar o cadastro de ativos. | Coord. do CCT |
 | **Setor de Patrimônio** | Stakeholder | Controle inicial da origem e identificação global da Unifor. | Setor Central |
 | **Equipe de TI / Grupo CMD** | Desenvolvimento | Projetar, implementar e manter a plataforma. | Grupo CMD |
 | **Jurídico Institucional** | Stakeholder Consultivo | Validadores da legalidade do Termo de Responsabilidade Eletrônico e assinaturas digitais. | Jurídico Unifor |
@@ -57,7 +57,7 @@ A demanda consiste em um sistema digital que permitirá:
 * **Descrição:** Funcionário administrativo que interage com os professores para realizar as movimentações de equipamentos.
 * **Objetivo:** Validar as movimentações e garantir o registro correto de avarias e a conferência de itens do kit na devolução.
 
-### 5.3. Administrador (Coordenação)
+### 5.3. Administrador
 
 * **Descrição:** Responsável pela gestão estratégica e operacional dos recursos físicos do centro.
 * **Objetivo:** Gerenciar o cadastro de ativos, monitorar o ciclo de vida dos equipamentos e realizar auditorias através do histórico de movimentações.
