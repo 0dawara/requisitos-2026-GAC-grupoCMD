@@ -15,8 +15,8 @@ package "GAC - Gestão de Ativos do CCT" {
 
 P --> UC1
 P --> UC3
-P ..> UC2
-P ..> UC4
+UC2 --> P
+UC4 --> P
 AT --> UC2
 AT --> UC4
 AD --> UC5

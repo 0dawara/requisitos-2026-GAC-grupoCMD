@@ -65,6 +65,7 @@ A demanda consiste em um sistema digital que permitirá:
 ### Necessidade 1: Cadastro de Ativos
 
 #### F1.1 CRUD de Projetores
+
 * **Descrição:** Cadastro, consulta, atualização e exclusão de projetores com número de patrimônio, Tag NFC e QR Code.
 * **Incluída:** Sim.
 * **Atores:** Administrador.
@@ -72,6 +73,7 @@ A demanda consiste em um sistema digital que permitirá:
 * **Valor:** Alto.
 
 #### F1.2 CRUD de Cabos
+
 * **Descrição:** Cadastro, consulta, atualização e exclusão de cabos com número de patrimônio, tipo, Tag NFC e QR Code.
 * **Incluída:** Sim.
 * **Atores:** Administrador.
@@ -79,6 +81,7 @@ A demanda consiste em um sistema digital que permitirá:
 * **Valor:** Alto.
 
 #### F1.3 CRUD de Chaves
+
 * **Descrição:** Cadastro, consulta, atualização e exclusão de chaves com sua respectiva sala, Tag NFC e QR Code.
 * **Incluída:** Sim.
 * **Atores:** Administrador.
@@ -86,6 +89,7 @@ A demanda consiste em um sistema digital que permitirá:
 * **Valor:** Alto.
 
 #### F1.4 Inativação de Ativos
+
 * **Descrição:** Inativação de projetores, cabos e chaves.
 * **Incluída:** Sim.
 * **Atores:** Administrador.
@@ -93,6 +97,7 @@ A demanda consiste em um sistema digital que permitirá:
 * **Valor:** Alto.
 
 #### F1.5 Consulta ao Histórico de Cadastro
+
 * **Descrição:** Permite ao administrador auditar as alterações realizadas nos cadastros de ativos.
 * **Incluída:** Sim.
 * **Atores:** Administrador.
@@ -102,6 +107,7 @@ A demanda consiste em um sistema digital que permitirá:
 ### Necessidade 2: Locação Ágil e Segura
 
 #### F2.1 Reserva Ágil de Ativos
+
 * **Descrição:** Solicitação de reserva de ativos feita pelo professor através do sistema.
 * **Incluída:** Sim.
 * **Atores:** Professor.
@@ -109,6 +115,7 @@ A demanda consiste em um sistema digital que permitirá:
 * **Valor:** Alto.
 
 #### F2.2 Confirmação de Locação
+
 * **Descrição:** Confirmação de locação feita pelo atendente, com conferência do kit e aprovação na retirada.
 * **Incluída:** Sim.
 * **Atores:** Atendente.
@@ -116,6 +123,7 @@ A demanda consiste em um sistema digital que permitirá:
 * **Valor:** Alto.
 
 #### F2.3 Transferência de Ativos entre Professores
+
 * **Descrição:** Permite a transferência direta entre professores via QR Code/NFC, mantendo a rastreabilidade.
 * **Incluída:** Sim.
 * **Atores:** Professor.
@@ -123,6 +131,7 @@ A demanda consiste em um sistema digital que permitirá:
 * **Valor:** Alto.
 
 #### F2.4 Auditoria de Histórico de Locação
+
 * **Descrição:** Consulta ao histórico completo de quem utilizou cada ativo.
 * **Incluída:** Sim.
 * **Atores:** Administrador.
@@ -132,6 +141,7 @@ A demanda consiste em um sistema digital que permitirá:
 ### Necessidade 3: Devolução de Ativos
 
 #### F3.1 Registro de Devolução
+
 * **Descrição:** Registro de devolução pelo atendente após conferência física.
 * **Incluída:** Sim.
 * **Atores:** Atendente.
@@ -139,6 +149,7 @@ A demanda consiste em um sistema digital que permitirá:
 * **Valor:** Alto.
 
 #### F3.2 Auditoria de Histórico de Devolução
+
 * **Descrição:** Consulta ao registro de quando e em que estado o ativo foi devolvido.
 * **Incluída:** Sim.
 * **Atores:** Administrador.
@@ -148,6 +159,7 @@ A demanda consiste em um sistema digital que permitirá:
 ### Necessidade 4: Notificações e Monitoramento
 
 #### F4.1 Alertas e Notificações
+
 * **Descrição:** Lembretes de atraso e notificações de transferência.
 * **Incluída:** Sim.
 * **Atores:** Atendente e Professor.
@@ -162,7 +174,7 @@ A demanda consiste em um sistema digital que permitirá:
 
 Ilustra os atores (usuários e sistemas externos) e as interações principais com a solução.
 
-![Diagrama de Caso de Uso GAC Geral](../../Diagramas/cdu-gac-geral.png)
+![Diagrama de Caso de Uso GAC Geral](../Diagramas/cdu-gac-geral.png)
 
 ---
 
