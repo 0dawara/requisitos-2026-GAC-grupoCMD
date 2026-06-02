@@ -174,7 +174,37 @@ A demanda consiste em um sistema digital que permitirá:
 
 Ilustra os atores (usuários e sistemas externos) e as interações principais com a solução.
 
-![Diagrama de Caso de Uso GAC Geral](../Diagramas/cdu-gac-geral.png)
+```mermaid
+flowchart LR
+    %% Atores
+    Prof((Professor))
+    Aten((Atendente))
+    Admin((Administrador))
+    
+    %% Sistema e Casos de Uso
+    subgraph GAC [Sistema GAC]
+        direction TB
+        UC1([CDU-01 Solicitar Reserva])
+        UC2([CDU-02 Confirmar Locação])
+        UC3([CDU-03 Transferir Ativo])
+        UC4([CDU-04 Registrar Devolução])
+        UC5([CDU-05 Gerenciar Ativos])
+        UC6([CDU-06 Auditar Movimentações])
+    end
+    
+    %% Relações Professor
+    Prof --> UC1
+    Prof -.-> UC2
+    Prof --> UC3
+    
+    %% Relações Atendente
+    Aten --> UC2
+    Aten --> UC4
+    
+    %% Relações Administrador
+    Admin --> UC5
+    Admin --> UC6
+```
 
 ---
 

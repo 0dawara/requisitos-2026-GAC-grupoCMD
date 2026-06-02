@@ -92,8 +92,8 @@
 
 ## 5. Checklist de Validação (RF)
 
-* [ ] Os requisitos funcionais estão alinhados com a Visão da Demanda.
-* [ ] Cada RF possui uma descrição clara da ação e do ator.
-* [ ] As regras de negócio (RN) foram referenciadas nos requisitos aplicáveis.
-* [ ] Os requisitos são testáveis (ex: "O sistema deve permitir...").
-* [ ] A numeração (RF01, RF02...) está sequencial e organizada por necessidade.
+* [x] Os requisitos funcionais estão alinhados com a Visão da Demanda.
+* [x] Cada RF possui uma descrição clara da ação e do ator.
+* [x] As regras de negócio (RN) foram referenciadas nos requisitos aplicáveis.
+* [x] Os requisitos são testáveis (ex: "O sistema deve permitir...").
+* [x] A numeração (RF01, RF02...) está sequencial e organizada por necessidade.

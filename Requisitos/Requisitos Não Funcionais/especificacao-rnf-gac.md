@@ -56,10 +56,64 @@
 
 ---
 
-## 4. Checklist de Validação (RNF)
+## 2. Requisitos Externos
+
+### 2.1. Ético
+
+* **Não se aplica**
+
+### 2.2. Regulatório
+
+* **Não se aplica**
+
+### 2.3. Legislativo
+
+* **Não se aplica**
+
+## 3. Requisitos Organizacionais
+
+### 3.1. Ambientais
+
+* **Não se aplica**
+
+### 3.2. Operacionais
+
+* **Não se aplica**
+
+### 3.3. Desenvolvimento
+
+* **Não se aplica**
+
+---
+
+## 4. Checklist de Validação do Artefato (RNF)
+
+Use este checklist antes de concluir a versão do documento.
+
+### 4.1. Estrutura e escopo
 
 * [x] O documento possui histórico de versões preenchido.
-* [x] Requisitos de operação offline e sincronização estão detalhados.
-* [x] As métricas de desempenho (RNF01, RNF02, RNF03) são verificáveis.
-* [x] A segurança da assinatura eletrônica foi definida adequadamente.
-* [x] O artefato segue o padrão visual e de estrutura do projeto.
+* [x] O escopo da solução está claro no documento.
+* [x] Há requisitos registrados nas seções aplicáveis (produto, externos e organizacionais).
+* [x] Requisitos não aplicáveis estão explicitamente marcados como "Não se aplica", quando necessário.
+
+### 4.2. Qualidade dos requisitos
+
+* [x] Cada requisito está escrito de forma objetiva e verificável.
+* [x] Cada requisito possui critério mensurável (tempo, percentual, limite, condição ou evidência).
+* [x] Não há requisito ambíguo com termos vagos (ex.: "rápido", "seguro", "fácil") sem métrica.
+* [x] Requisitos duplicados ou conflitantes foram eliminados.
+
+### 4.3. Conformidade e rastreabilidade
+
+* [x] Requisitos regulatórios/legais relevantes foram registrados.
+* [x] Requisitos de privacidade e segurança foram contemplados quando aplicáveis.
+* [x] Os requisitos estão alinhados com visão da demanda, glossário e casos de uso.
+* [x] Existe rastreabilidade dos requisitos para fontes de negócio, norma ou decisão técnica.
+
+### 4.4. Prontidão para uso
+
+* [x] Os requisitos podem ser usados como base para implementação e testes.
+* [x] Há insumos suficientes para criar critérios de aceitação.
+* [x] O documento foi revisado por pares.
+* [x] A versão está pronta para aprovação/publicação.
