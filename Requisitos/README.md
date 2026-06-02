@@ -12,7 +12,6 @@ Organizar o processo de requisitos para garantir:
 
 ## Estrutura da Pasta
 
-- `Artefatos/Templates/`: templates para criação de novos artefatos.
 - `Elicitacao/`: documentos de visão da demanda, elicitação, glossário, e análise de stakeholders.
 - `Especificação de Casos de Uso/`: especificações de Casos de Uso (CDU).
 - `Especificação de Regra de Negocio/`: especificações de Regras de Negócio (RN).
@@ -20,7 +19,7 @@ Organizar o processo de requisitos para garantir:
 
 ## Como Usar
 
-1. Para novos documentos, faça uma cópia do template apropriado em `Artefatos/Templates/`.
+1. Para novos documentos, faça uma cópia do template apropriado localizado no repositório do projeto **LAPIS**.
 2. Preencha o documento com base no escopo de gestão de ativos do projeto GAC.
 3. Salve o documento final na pasta correspondente a sua categoria.
 
@@ -28,6 +27,6 @@ Organizar o processo de requisitos para garantir:
 
 - Mantenha a nomenclatura consistente dos arquivos (exemplo: `cdu-XX-nome-da-funcionalidade.md`);
 - Atualize os históricos de versão sempre que houver mudança relevante;
-- Use os templates como ponto de partida para novos artefatos;
+- Use os templates do projeto LAPIS como ponto de partida para novos artefatos;
 - Aplique os checklists de validação antes de finalizar os documentos de requisitos;
 - Preserve histórico e contexto dos requisitos para facilitar validação.
