@@ -80,8 +80,8 @@ Uma **plataforma digital integrada a identificadores físicos (NFC e QR Code)** 
 
 ## 7️⃣ Próximos Passos (Roadmap)
 
-1. 📋 **Elicitação e Modelagem de Requisitos** (Fase Atual)
-2. 🎨 **Prototipação das Interfaces** (Google Stitch — Painel Web e App Mobile)
-3. 🤝 **Validação com Stakeholders** (Professores, Atendentes e Diretoria)
-4. ⚙️ **Desenvolvimento do MVP** (Minimum Viable Product)
-5. 🚀 **Implantação Piloto no CCT**
+1. 🤝 **Validação com Stakeholders** — Apresentação e refinamento dos protótipos com Professores, Atendentes e Diretoria do CCT
+2. ⚙️ **Desenvolvimento do MVP** — Implementação do fluxo principal (reserva, confirmação, transferência e devolução) com Flutter e Firebase
+3. 🎓 **Treinamento** — Capacitação de professores e atendentes antes do lançamento
+4. 🚀 **Lançamento Gradual** — Implantação piloto no CCT com suporte completo
+5. 📈 **Monitoramento e Melhorias** — Ajustes contínuos conforme feedback dos usuários

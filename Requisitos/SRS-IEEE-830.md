@@ -34,6 +34,8 @@ O Projeto GAC visa substituir os métodos de controle manuais por um sistema dig
 * Documento de Visão da Demanda (VD)
 * Especificação de Requisitos Funcionais (RF)
 * Especificação de Requisitos Não Funcionais (RNF)
+* Especificação de Regras de Negócio (RN)
+* Protótipos de Alta Fidelidade — Google Stitch ([`assets/screens/`](../assets/screens/))
 
 ---
 
@@ -63,9 +65,11 @@ As principais funções do produto englobam:
 
 ### 2.4 Ambiente Operacional
 
-* O aplicativo móvel será compatível com dispositivos **Android 9.0+** e **iOS 13+**.
+* O aplicativo móvel será compatível com dispositivos **Android 9.0+** e **iOS 13+**, desenvolvido em **Flutter**.
+* O painel administrativo web será desenvolvido em **Flutter Web**.
+* O backend utilizará **Firebase** (Firestore, Authentication e Cloud Messaging) como plataforma BaaS.
 * Utilização de leitores de **QR Code** ou sensores **NFC** para identificação dos equipamentos.
-* Aplicação web para controle administrativo.
+* Conectividade de rede não é obrigatória para operações de leitura e registro — o sistema suporta modo offline com sincronização automática.
 
 ### 2.5 Restrições de Design e Implementação
 

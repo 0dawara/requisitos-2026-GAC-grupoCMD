@@ -25,3 +25,8 @@
 | **Patrimônio (Número de)** | Identificador único global da universidade atribuído a cada bem físico permanente. | Setor de Patrimônio Unifor |
 | **Ponto Cego** | Situação em que a localização ou o responsável por um ativo é desconhecido devido a falhas no processo manual. | Problema de Negócio |
 | **Tríade da Rastreabilidade** | Conceito do GAC focado em Usabilidade, Operação e Auditoria para garantir o controle total dos ativos. | Proposta de Valor GAC |
+| **Flutter** | Framework open-source do Google para desenvolvimento de aplicações nativas para Android, iOS e Web a partir de um único código-base. Tecnologia proposta para o app mobile e painel web do GAC. | Stack Tecnológica GAC |
+| **Firebase** | Plataforma BaaS (Backend as a Service) do Google que provê autenticação, banco de dados em tempo real (Firestore), notificações push (Cloud Messaging) e hospedagem. Backend proposto para o GAC. | Stack Tecnológica GAC |
+| **Google Stitch** | Ferramenta de prototipação de interfaces da Google utilizada para criar os protótipos de alta fidelidade do GAC. | Stack Tecnológica GAC |
+| **BaaS (Backend as a Service)** | Modelo de serviço em nuvem que fornece infraestrutura de backend gerenciada, eliminando a necessidade de configuração de servidores próprios. | Tecnologia do Projeto |
+| **GitHub Pages** | Serviço de hospedagem estática do GitHub utilizado para disponibilizar o pitch interativo do GAC publicamente. | Infraestrutura do Projeto |
