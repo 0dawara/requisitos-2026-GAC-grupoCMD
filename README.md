@@ -1,6 +1,6 @@
 # Sistema de Gestão de Ativos do CCT (GAC)
 
-> Repositório do **Grupo CMD**, dedicado à disciplina de **Requisitos e Modelagem de Sistemas**.
+> Repositório do **Grupo CMD** (Thiago Leal Menezes e Victor Carvalho Crispim de Souza), dedicado à disciplina de **Requisitos e Modelagem de Sistemas**.
 
 Este projeto tem como objetivo principal modelar e documentar detalhadamente os requisitos para um **Sistema de Gestão de Ativos (GAC)**. A plataforma visa facilitar, registrar e controlar o inventário, bem como o processo de empréstimo (locação) e devolução de equipamentos essenciais, tais como:
 
