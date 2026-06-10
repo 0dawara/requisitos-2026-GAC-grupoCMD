@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Registrar Devolução - GAC Unifor</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#a6c8ff",
+                        "on-background": "#101d25",
+                        "primary": "#0037be",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "outline": "#747688",
+                        "on-secondary-fixed-variant": "#2d3aa4",
+                        "on-primary-fixed-variant": "#0036bb",
+                        "on-secondary-fixed": "#000964",
+                        "inverse-on-surface": "#e5f3ff",
+                        "surface-bright": "#f5faff",
+                        "inverse-surface": "#25323b",
+                        "primary-fixed": "#dde1ff",
+                        "surface-container-high": "#dceaf6",
+                        "surface-container": "#e2f0fc",
+                        "tertiary-fixed": "#d5e3ff",
+                        "gelo": "#E4F2FE",
+                        "on-primary-fixed": "#001354",
+                        "on-tertiary-fixed-variant": "#004786",
+                        "background": "#f5faff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#001c3b",
+                        "surface-container-low": "#eaf5ff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#142290",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#c9dcff",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#2b61a2",
+                        "surface-dim": "#cedce8",
+                        "on-primary-container": "#d3d9ff",
+                        "primary-container": "#004af7",
+                        "anil": "#004AF7",
+                        "surface-container-highest": "#d6e4f0",
+                        "surface-tint": "#0049f4",
+                        "secondary-container": "#8592ff",
+                        "on-surface-variant": "#434656",
+                        "azul-claro": "#87B7FE",
+                        "tertiary": "#014989",
+                        "surface": "#f5faff",
+                        "on-surface": "#101d25",
+                        "primary-fixed-dim": "#b8c4ff",
+                        "on-primary": "#ffffff",
+                        "marinho": "#132190",
+                        "inverse-primary": "#b8c4ff",
+                        "surface-variant": "#d6e4f0",
+                        "secondary-fixed-dim": "#bdc2ff",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#c3c5d9",
+                        "secondary": "#4753bd",
+                        "secondary-fixed": "#dfe0ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "32px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "container-max-width": "1280px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: theme('colors.surface');
+            color: theme('colors.on-surface');
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Custom scrollbar for main content to match airy feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cedce8;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #87B7FE;
+        }
+
+        .radio-segment-input:checked+div {
+            background-color: #004AF7;
+            /* anil */
+            color: white;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .radio-segment-input.faltante:checked+div {
+            background-color: #ba1a1a;
+            /* error */
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="flex h-screen overflow-hidden">
+    <!-- SideNavBar -->
+    <nav
+        class="hidden md:flex flex-col h-full py-base px-4 gap-2 bg-white dark:bg-surface-container-lowest border-r border-azul-claro/20 shadow-sm dark:shadow-none w-64 z-20 shrink-0 relative">
+        <div class="mb-8 px-4 pt-4 flex flex-col gap-1">
+            <h1 class="font-headline-md text-headline-md font-extrabold text-marinho dark:text-primary-fixed">GAC</h1>
+            <p class="font-label-sm text-label-sm text-outline">Gestão de Ativos CCT</p>
+        </div>
+        <ul class="flex flex-col gap-2 flex-grow">
+            <li class="">
+                <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low rounded-lg transition-all"
+                    href="#">
+                    <span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                    <span class="font-label-md text-label-md">Dashboard</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low rounded-lg transition-all"
+                    href="#">
+                    <span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+                    <span class="font-label-md text-label-md">Ativos</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="flex items-center gap-3 px-4 py-3 bg-gelo text-marinho font-bold dark:bg-marinho dark:text-gelo rounded-lg hover:bg-gelo/30 dark:hover:bg-surface-container-high transition-all scale-95 duration-200"
+                    href="#">
+                    <span class="material-symbols-outlined" data-icon="swap_horiz"
+                        style="font-variation-settings: 'FILL' 1;">swap_horiz</span>
+                    <span class="font-label-md text-label-md">Movimentações</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low rounded-lg transition-all"
+                    href="#">
+                    <span class="material-symbols-outlined" data-icon="assessment">assessment</span>
+                    <span class="font-label-md text-label-md">Relatórios</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low rounded-lg transition-all"
+                    href="#">
+                    <span class="material-symbols-outlined" data-icon="settings">settings</span>
+                    <span class="font-label-md text-label-md">Configurações</span>
+                </a>
+            </li>
+        </ul>
+        <div class="mt-auto border-t border-azul-claro/20 pt-4">
+            <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low rounded-lg transition-all"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="logout">logout</span>
+                <span class="font-label-md text-label-md">Sair</span>
+            </a>
+        </div>
+    </nav>
+    <!-- Main Content Canvas -->
+    <main class="flex-1 overflow-y-auto w-full relative">
+        <div class="max-w-[container-max-width] mx-auto px-margin-mobile md:px-margin-desktop py-8 flex flex-col gap-8">
+            <!-- Page Header -->
+            <header class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <h1 class="font-headline-lg text-headline-lg text-marinho tracking-tight">Registrar Devolução</h1>
+                    <p class="font-body-md text-body-md text-outline mt-1">Conclua o empréstimo verificando a
+                        integridade dos itens.</p>
+                </div>
+                <div
+                    class="flex items-center gap-2 text-outline bg-white px-4 py-2 rounded-full border border-azul-claro/30 shadow-sm">
+                    <span class="material-symbols-outlined text-[18px]">schedule</span>
+                    <span class="font-label-sm text-label-sm">Hoje, 14:30</span>
+                </div>
+            </header>
+            <!-- Card Identificação -->
+            <section
+                class="bg-white rounded-xl p-6 border border-azul-claro/30 shadow-sm flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+                <!-- Ativo -->
+                <div class="flex items-start gap-4">
+                    <div
+                        class="w-14 h-14 rounded-lg bg-gelo flex items-center justify-center flex-shrink-0 text-marinho">
+                        <span class="material-symbols-outlined text-[28px]"
+                            style="font-variation-settings: 'FILL' 1;">videocam</span>
+                    </div>
+                    <div>
+                        <span class="block font-label-sm text-label-sm text-outline uppercase tracking-wider mb-1">Ativo
+                            em devolução</span>
+                        <h2 class="font-headline-md text-headline-md text-on-surface">Projetor Epson PowerLite</h2>
+                        <div class="flex items-center gap-2 mt-2">
+                            <span
+                                class="bg-surface-container-high text-tertiary font-label-sm text-label-sm px-2 py-1 rounded-md border border-azul-claro/50 flex items-center gap-1">
+                                <span class="material-symbols-outlined text-[14px]">tag</span> 0042
+                            </span>
+                            <span
+                                class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-1 rounded-md border border-tertiary-fixed-dim">
+                                Categoria: Audiovisual
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:block w-px h-16 bg-azul-claro/30"></div>
+                <!-- Responsável -->
+                <div class="flex items-start gap-4 md:min-w-[280px]">
+                    <div
+                        class="w-12 h-12 rounded-full bg-surface-container-highest border border-azul-claro/30 flex items-center justify-center flex-shrink-0 text-on-surface-variant overflow-hidden">
+                        <img alt="Foto da Prof. Ana Lima" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSzPzSVl3wf9NfTd7Agg1bXZLQqh1TqbhGHqJZHnfPpq3X1OS_UTeJCWb1dGFIJUO56iIX_6Pqhz4pGhyTApQO895WH1AZ14JjbPRaaqTZ3KBArVidNESxOZMf6tENhMmIL6Rnj67WaBtU_Ft9V1FlFklU62e2E-eaWXpmvz_E3x3AlmJhAFgNj1TT7-VP9EhULYl1Tve3kkf8UGmZXlx0dSnB0A7idRycuGOjg-eH_IIOgTjE-msqJaCzyhbCh54WJFuUtFvTuub5" />
+                    </div>
+                    <div>
+                        <span
+                            class="block font-label-sm text-label-sm text-outline uppercase tracking-wider mb-1">Responsável</span>
+                        <h3 class="font-body-lg text-body-lg font-semibold text-on-surface">Prof. Ana Lima</h3>
+                        <p class="font-body-md text-body-md text-outline flex items-center gap-1 mt-0.5">
+                            <span class="material-symbols-outlined text-[16px]">business</span> CCT - Bloco J
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Checklist Section -->
+            <section class="bg-white rounded-xl border border-azul-claro/30 shadow-sm overflow-hidden">
+                <div class="px-6 py-4 border-b border-gelo flex items-center justify-between">
+                    <h3 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2">
+                        <span class="material-symbols-outlined text-outline">checklist</span>
+                        Checklist de Integridade
+                    </h3>
+                    <span
+                        class="font-label-sm text-label-sm text-outline bg-surface-container-low px-3 py-1 rounded-full">4
+                        Itens obrigatórios</span>
+                </div>
+                <div class="flex flex-col">
+                    <!-- Item 1: Cabo de alimentação -->
+                    <div
+                        class="px-6 py-5 border-b border-gelo flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-surface-container-lowest transition-colors">
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-azul-claro"></div>
+                            <span class="font-body-lg text-body-lg font-medium text-on-surface">Cabo de
+                                alimentação</span>
+                        </div>
+                        <div class="flex bg-surface-container-low p-1 rounded-lg border border-azul-claro/30">
+                            <label class="cursor-pointer relative">
+                                <input checked="" class="peer sr-only radio-segment-input" name="item1" type="radio"
+                                    value="ok" />
+                                <div
+                                    class="px-4 py-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[18px]">check_circle</span> OK
+                                </div>
+                            </label>
+                            <label class="cursor-pointer relative">
+                                <input class="peer sr-only radio-segment-input faltante" name="item1" type="radio"
+                                    value="faltante" />
+                                <div
+                                    class="px-4 py-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[18px]">cancel</span> Faltante
+                                </div>
+                            </label>
+                            <label class="cursor-pointer relative">
+                                <input class="peer sr-only radio-segment-input faltante" name="item1" type="radio"
+                                    value="avariado" />
+                                <div
+                                    class="px-4 py-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[18px]">warning</span> Avariado
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Item 2: Cabo HDMI -->
+                    <div
+                        class="px-6 py-5 border-b border-gelo flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-surface-container-lowest transition-colors">
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-azul-claro"></div>
+                            <span class="font-body-lg text-body-lg font-medium text-on-surface">Cabo HDMI</span>
+                        </div>
+                        <div class="flex bg-surface-container-low p-1 rounded-lg border border-azul-claro/30">
+                            <label class="cursor-pointer relative">
+                                <input checked="" class="peer sr-only radio-segment-input" name="item2" type="radio"
+                                    value="ok" />
+                                <div
+                                    class="px-4 py-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[18px]">check_circle</span> OK
+                                </div>
+                            </label>
+                            <label class="cursor-pointer relative">
+                                <input class="peer sr-only radio-segment-input faltante" name="item2" type="radio"
+                                    value="faltante" />
+                                <div
+                                    class="px-4 py-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[18px]">cancel</span> Faltante
+                                </div>
+                            </label>
+                            <label class="cursor-pointer relative">
+                                <input class="peer sr-only radio-segment-input faltante" name="item2" type="radio"
+                                    value="avariado" />
+                                <div
+                                    class="px-4 py-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[18px]">warning</span> Avariado
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Item 3: Controle Remoto -->
+                    <div
+                        class="px-6 py-5 border-b border-gelo flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-error-container/10 border-l-4 border-l-error">
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-error"></div>
+                            <div class="flex flex-col">
+                                <span class="font-body-lg text-body-lg font-medium text-on-surface">Controle
+                                    remoto</span>
+                                <span class="font-label-sm text-label-sm text-error flex items-center gap-1 mt-1">
+                                    <span class="material-symbols-outlined text-[14px]">history</span> Marcado como
+                                    faltante no empréstimo
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex bg-surface-container-low p-1 rounded-lg border border-azul-claro/30">
+                            <label class="cursor-pointer relative">
+                                <input class="peer sr-only radio-segment-input" name="item3" type="radio" value="ok" />
+                                <div
+                                    class="px-4 py-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[18px]">check_circle</span> OK
+                                </div>
+                            </label>
+                            <label class="cursor-pointer relative">
+                                <input checked="" class="peer sr-only radio-segment-input faltante" name="item3"
+                                    type="radio" value="faltante" />
+                                <div
+                                    class="px-4 py-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[18px]">cancel</span> Faltante
+                                </div>
+                            </label>
+                            <label class="cursor-pointer relative">
+                                <input class="peer sr-only radio-segment-input faltante" name="item3" type="radio"
+                                    value="avariado" />
+                                <div
+                                    class="px-4 py-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[18px]">warning</span> Avariado
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Item 4: Integridade Física -->
+                    <div
+                        class="px-6 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-surface-container-lowest transition-colors">
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-azul-claro"></div>
+                            <span class="font-body-lg text-body-lg font-medium text-on-surface">Integridade Física
+                                (Lente/Carcaça)</span>
+                        </div>
+                        <div class="flex bg-surface-container-low p-1 rounded-lg border border-azul-claro/30">
+                            <label class="cursor-pointer relative">
+                                <input checked="" class="peer sr-only radio-segment-input" name="item4" type="radio"
+                                    value="ok" />
+                                <div
+                                    class="px-4 py-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[18px]">check_circle</span> OK
+                                </div>
+                            </label>
+                            <label class="cursor-pointer relative">
+                                <input class="peer sr-only radio-segment-input faltante" name="item4" type="radio"
+                                    value="faltante" />
+                                <div
+                                    class="px-4 py-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[18px]">cancel</span> Faltante
+                                </div>
+                            </label>
+                            <label class="cursor-pointer relative">
+                                <input class="peer sr-only radio-segment-input faltante" name="item4" type="radio"
+                                    value="avariado" />
+                                <div
+                                    class="px-4 py-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[18px]">warning</span> Avariado
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Observações e Upload (Grid) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Observações -->
+                <section class="bg-white rounded-xl p-6 border border-azul-claro/30 shadow-sm flex flex-col">
+                    <label class="font-headline-md text-headline-md text-on-surface mb-2 flex items-center gap-2"
+                        for="observacoes">
+                        <span class="material-symbols-outlined text-outline">edit_note</span>
+                        Observações Adicionais
+                    </label>
+                    <p class="font-body-md text-body-md text-outline mb-4">Registre detalhes sobre o estado do
+                        equipamento ou motivo de faltas.</p>
+                    <textarea
+                        class="w-full flex-1 rounded-lg border border-azul-claro/50 bg-surface-bright focus:ring-2 focus:ring-anil focus:border-anil p-4 font-body-md text-body-md text-on-surface placeholder-outline transition-shadow resize-none"
+                        id="observacoes"
+                        placeholder="Ex: Professor informou que a lente estava suja, mas sem arranhões aparentes..."
+                        rows="5"></textarea>
+                </section>
+                <!-- Upload de Fotos -->
+                <section class="bg-white rounded-xl p-6 border border-azul-claro/30 shadow-sm flex flex-col">
+                    <div class="mb-4 flex items-center justify-between">
+                        <div>
+                            <h3 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2">
+                                <span class="material-symbols-outlined text-outline">add_a_photo</span>
+                                Registro Fotográfico
+                            </h3>
+                            <p class="font-body-md text-body-md text-outline mt-1">Recomendado em caso de avarias
+                                físicas.</p>
+                        </div>
+                        <span
+                            class="font-label-sm text-label-sm text-outline bg-surface-container-low px-3 py-1 rounded-full border border-azul-claro/30">Opcional</span>
+                    </div>
+                    <div
+                        class="flex-1 flex flex-col items-center justify-center border-2 border-dashed border-azul-claro/50 rounded-lg bg-surface-container-low/50 hover:bg-surface-container-low transition-colors cursor-pointer p-8 text-center group">
+                        <div
+                            class="w-16 h-16 rounded-full bg-gelo flex items-center justify-center text-anil mb-4 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-[32px]">cloud_upload</span>
+                        </div>
+                        <span class="font-label-md text-label-md text-marinho block mb-1">Arraste fotos para cá ou
+                            clique para selecionar</span>
+                        <span class="font-body-md text-body-md text-outline text-sm">PNG, JPG até 5MB</span>
+                    </div>
+                </section>
+            </div>
+            <!-- Rodapé de Ações -->
+            <footer
+                class="mt-4 pt-6 border-t border-gelo flex flex-col-reverse sm:flex-row items-center justify-end gap-4 pb-10">
+                <button
+                    class="w-full sm:w-auto px-6 py-3 rounded-lg font-label-md text-label-md text-on-surface-variant bg-transparent border border-transparent hover:bg-surface-container-low transition-colors"
+                    type="button">
+                    Cancelar
+                </button>
+                <button
+                    class="w-full sm:w-auto px-8 py-3 rounded-lg font-label-md text-label-md text-white bg-anil hover:bg-primary shadow-[0_4px_14px_0_rgba(0,74,247,0.2)] transition-all flex items-center justify-center gap-2"
+                    type="button">
+                    <span class="material-symbols-outlined text-[20px]">check</span>
+                    Confirmar Devolução
+                </button>
+            </footer>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Dashboard do Administrador - GAC Unifor</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#a6c8ff",
+                        "on-background": "#101d25",
+                        "primary": "#0037be",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "outline": "#747688",
+                        "on-secondary-fixed-variant": "#2d3aa4",
+                        "on-primary-fixed-variant": "#0036bb",
+                        "on-secondary-fixed": "#000964",
+                        "inverse-on-surface": "#e5f3ff",
+                        "surface-bright": "#f5faff",
+                        "inverse-surface": "#25323b",
+                        "primary-fixed": "#dde1ff",
+                        "surface-container-high": "#dceaf6",
+                        "surface-container": "#e2f0fc",
+                        "tertiary-fixed": "#d5e3ff",
+                        "gelo": "#E4F2FE",
+                        "on-primary-fixed": "#001354",
+                        "on-tertiary-fixed-variant": "#004786",
+                        "background": "#f5faff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#001c3b",
+                        "surface-container-low": "#eaf5ff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#142290",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#c9dcff",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#2b61a2",
+                        "surface-dim": "#cedce8",
+                        "on-primary-container": "#d3d9ff",
+                        "primary-container": "#004af7",
+                        "anil": "#004AF7",
+                        "surface-container-highest": "#d6e4f0",
+                        "surface-tint": "#0049f4",
+                        "secondary-container": "#8592ff",
+                        "on-surface-variant": "#434656",
+                        "azul-claro": "#87B7FE",
+                        "tertiary": "#014989",
+                        "surface": "#f5faff",
+                        "on-surface": "#101d25",
+                        "primary-fixed-dim": "#b8c4ff",
+                        "on-primary": "#ffffff",
+                        "marinho": "#132190",
+                        "inverse-primary": "#b8c4ff",
+                        "surface-variant": "#d6e4f0",
+                        "secondary-fixed-dim": "#bdc2ff",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#c3c5d9",
+                        "secondary": "#4753bd",
+                        "secondary-fixed": "#dfe0ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "32px",
+                        "margin-mobile": "16px",
+                        "container-max-width": "1280px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "display-lg": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "label-sm": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "body-md": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "label-md": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "display-lg-mobile": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "headline-lg": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "body-lg": [
+                            "Plus Jakarta Sans"
+                        ],
+                        "headline-md": [
+                            "Plus Jakarta Sans"
+                        ]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": [
+                            "28px",
+                            {
+                                "lineHeight": "36px",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "display-lg": [
+                            "56px",
+                            {
+                                "lineHeight": "64px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "label-sm": [
+                            "12px",
+                            {
+                                "lineHeight": "16px",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "body-md": [
+                            "16px",
+                            {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "label-md": [
+                            "14px",
+                            {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.01em",
+                                "fontWeight": "500"
+                            }
+                        ],
+                        "display-lg-mobile": [
+                            "40px",
+                            {
+                                "lineHeight": "48px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "headline-lg": [
+                            "32px",
+                            {
+                                "lineHeight": "40px",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "body-lg": [
+                            "18px",
+                            {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "headline-md": [
+                            "24px",
+                            {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                            }
+                        ]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: theme('colors.surface');
+            color: theme('colors.on-surface');
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body class="flex h-screen overflow-hidden">
+    <!-- SideNavBar -->
+    <nav
+        class="hidden md:flex flex-col h-full py-base px-4 gap-2 bg-white dark:bg-surface-container-lowest border-r border-azul-claro/20 shadow-sm dark:shadow-none w-64 z-20 shrink-0 relative">
+        <div class="mb-8 px-4 pt-4 flex flex-col gap-1">
+            <h1 class="font-headline-md text-headline-md font-extrabold text-marinho dark:text-primary-fixed">GAC</h1>
+            <p class="font-label-sm text-label-sm text-outline">Gestão de Ativos CCT</p>
+        </div>
+        <ul class="flex flex-col gap-2 flex-grow">
+            <!-- Active Tab -->
+            <li class="">
+                <a class="flex items-center gap-3 px-4 py-3 bg-gelo text-marinho font-bold dark:bg-marinho dark:text-gelo rounded-lg hover:bg-gelo/30 dark:hover:bg-surface-container-high transition-all scale-95 duration-200"
+                    href="#">
+                    <span class="material-symbols-outlined" data-icon="dashboard"
+                        style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                    <span class="font-label-md text-label-md">Dashboard</span>
+                </a>
+            </li>
+            <!-- Inactive Tabs -->
+            <li class="">
+                <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low rounded-lg transition-all"
+                    href="#">
+                    <span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+                    <span class="font-label-md text-label-md">Ativos</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low rounded-lg transition-all"
+                    href="#">
+                    <span class="material-symbols-outlined" data-icon="swap_horiz">swap_horiz</span>
+                    <span class="font-label-md text-label-md">Movimentações</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low rounded-lg transition-all"
+                    href="#">
+                    <span class="material-symbols-outlined" data-icon="assessment">assessment</span>
+                    <span class="font-label-md text-label-md">Relatórios</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low rounded-lg transition-all"
+                    href="#">
+                    <span class="material-symbols-outlined" data-icon="settings">settings</span>
+                    <span class="font-label-md text-label-md">Configurações</span>
+                </a>
+            </li>
+        </ul>
+        <div class="mt-auto border-t border-azul-claro/20 pt-4">
+            <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low rounded-lg transition-all"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="logout">logout</span>
+                <span class="font-label-md text-label-md">Sair</span>
+            </a>
+        </div>
+    </nav>
+    <!-- Main Content Canvas -->
+    <main class="flex-1 overflow-y-auto w-full relative">
+        <!-- TopAppBar (Mobile Only - Suppressed on Desktop as per rules, using full SideNav) -->
+        <!-- Content Container -->
+        <div class="max-w-[container-max-width] mx-auto px-margin-mobile md:px-margin-desktop py-8 flex flex-col gap-8">
+            <!-- Header Section -->
+            <header class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <h2 class="font-headline-lg text-headline-lg text-on-background mb-1">Bom dia, Admin — CCT / Unifor
+                    </h2>
+                    <p class="font-body-md text-body-md text-outline" id="current-date">8 de junho de 2026</p>
+                </div>
+                <button
+                    class="bg-anil text-white font-label-md text-label-md px-6 py-3 rounded-lg shadow-[0_4px_14px_0_rgba(0,74,247,0.2)] hover:bg-primary transition-colors w-fit">
+                    Novo Empréstimo
+                </button>
+            </header>
+            <!-- KPI Cards Bento Grid -->
+            <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white rounded-xl p-6 border border-azul-claro border-opacity-30 flex flex-col gap-2 relative overflow-hidden group">
+                    <div
+                        class="absolute -right-4 -top-4 w-24 h-24 bg-gelo rounded-full opacity-50 group-hover:scale-150 transition-transform duration-500 ease-out z-0">
+                    </div>
+                    <div class="relative z-10">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-label-md text-label-md text-on-surface-variant">Projetores
+                                Cadastrados</span>
+                            <span class="material-symbols-outlined text-outline"
+                                style="font-variation-settings: 'FILL' 0;">inventory_2</span>
+                        </div>
+                        <span class="font-display-lg text-display-lg text-marinho">47</span>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="bg-white rounded-xl p-6 border border-azul-claro border-opacity-30 flex flex-col gap-2 relative overflow-hidden group">
+                    <div
+                        class="absolute -right-4 -top-4 w-24 h-24 bg-surface-container rounded-full opacity-50 group-hover:scale-150 transition-transform duration-500 ease-out z-0">
+                    </div>
+                    <div class="relative z-10">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-label-md text-label-md text-on-surface-variant">Em Uso Agora</span>
+                            <span class="material-symbols-outlined text-outline"
+                                style="font-variation-settings: 'FILL' 0;">bolt</span>
+                        </div>
+                        <span class="font-display-lg text-display-lg text-primary">12</span>
+                    </div>
+                </div>
+                <!-- Card 3 (Alert) -->
+                <div
+                    class="bg-error-container rounded-xl p-6 border border-error border-opacity-20 flex flex-col gap-2 relative overflow-hidden shadow-sm shadow-error/10">
+                    <div class="relative z-10">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-label-md text-label-md text-on-error-container font-semibold">Devoluções
+                                em Atraso</span>
+                            <span class="material-symbols-outlined text-error"
+                                style="font-variation-settings: 'FILL' 1;">warning</span>
+                        </div>
+                        <span class="font-display-lg text-display-lg text-error">3</span>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div
+                    class="bg-white rounded-xl p-6 border border-azul-claro border-opacity-30 flex flex-col gap-2 relative overflow-hidden group">
+                    <div
+                        class="absolute -right-4 -top-4 w-24 h-24 bg-tertiary-fixed rounded-full opacity-50 group-hover:scale-150 transition-transform duration-500 ease-out z-0">
+                    </div>
+                    <div class="relative z-10">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-label-md text-label-md text-on-surface-variant">Disponíveis</span>
+                            <span class="material-symbols-outlined text-outline"
+                                style="font-variation-settings: 'FILL' 0;">check_circle</span>
+                        </div>
+                        <span class="font-display-lg text-display-lg text-tertiary">32</span>
+                    </div>
+                </div>
+            </section>
+            <!-- Recent Movements Table Section -->
+            <section class="bg-white rounded-xl border border-azul-claro border-opacity-30 overflow-hidden mt-4">
+                <div class="p-6 border-b border-gelo flex items-center justify-between">
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Últimas Movimentações</h3>
+                    <button
+                        class="font-label-md text-label-md text-anil hover:text-primary transition-colors flex items-center gap-1">
+                        Ver todas
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </button>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-surface-bright border-b border-gelo">
+                                <th class="font-label-sm text-label-sm text-outline px-6 py-4 uppercase tracking-wider">
+                                    Ativo</th>
+                                <th class="font-label-sm text-label-sm text-outline px-6 py-4 uppercase tracking-wider">
+                                    Tipo</th>
+                                <th class="font-label-sm text-label-sm text-outline px-6 py-4 uppercase tracking-wider">
+                                    Responsável</th>
+                                <th class="font-label-sm text-label-sm text-outline px-6 py-4 uppercase tracking-wider">
+                                    Retirada</th>
+                                <th class="font-label-sm text-label-sm text-outline px-6 py-4 uppercase tracking-wider">
+                                    Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gelo">
+                            <!-- Row 1 (Em Uso) -->
+                            <tr class="hover:bg-surface-container-lowest transition-colors group">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 rounded-lg bg-gelo flex items-center justify-center text-marinho">
+                                            <span class="material-symbols-outlined"
+                                                style="font-variation-settings: 'FILL' 0;">videocam</span>
+                                        </div>
+                                        <div>
+                                            <p class="font-label-md text-label-md text-on-surface">Projetor Epson</p>
+                                            <p class="font-label-sm text-label-sm text-outline">#0042</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 font-body-md text-body-md text-on-surface-variant">Locação</td>
+                                <td class="px-6 py-4 font-body-md text-body-md text-on-surface-variant">Prof. Ana Lima
+                                </td>
+                                <td class="px-6 py-4 font-body-md text-body-md text-on-surface-variant">08/06/2026 09:30
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span
+                                        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-tertiary font-label-sm text-label-sm border border-azul-claro border-opacity-50">
+                                        <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                                        Em uso
+                                    </span>
+                                </td>
+                            </tr>
+                            <!-- Row 2 (Atraso) -->
+                            <tr class="hover:bg-error-container/30 transition-colors bg-error-container/10">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 rounded-lg bg-error-container flex items-center justify-center text-error">
+                                            <span class="material-symbols-outlined"
+                                                style="font-variation-settings: &quot;FILL&quot; 0;">link</span>
+                                        </div>
+                                        <div>
+                                            <p class="font-label-md text-label-md text-on-surface">Cabo HDMI 10m</p>
+                                            <p class="font-label-sm text-label-sm text-outline">#0128</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 font-body-md text-body-md text-on-surface-variant">Empréstimo</td>
+                                <td class="px-6 py-4 font-body-md text-body-md text-on-surface-variant">João Silva
+                                    (Monitor)</td>
+                                <td class="px-6 py-4 font-body-md text-body-md text-on-surface-variant">05/06/2026 14:00
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span
+                                        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-error text-on-error font-label-sm text-label-sm shadow-sm shadow-error/20">
+                                        <span class="material-symbols-outlined text-[14px]"
+                                            style="font-variation-settings: 'FILL' 1;">error</span>
+                                        Atrasado
+                                    </span>
+                                </td>
+                            </tr>
+                            <!-- Row 3 (Devolvido) -->
+                            <tr class="hover:bg-surface-container-lowest transition-colors group">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 rounded-lg bg-gelo flex items-center justify-center text-marinho">
+                                            <span class="material-symbols-outlined"
+                                                style="font-variation-settings: &quot;FILL&quot; 0;">key</span>
+                                        </div>
+                                        <div>
+                                            <p class="font-label-md text-label-md text-on-surface">Chave Sala 302</p>
+                                            <p class="font-label-sm text-label-sm text-outline">#0089</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 font-body-md text-body-md text-on-surface-variant">Locação</td>
+                                <td class="px-6 py-4 font-body-md text-body-md text-on-surface-variant">Prof. Carlos
+                                    Mendes</td>
+                                <td class="px-6 py-4 font-body-md text-body-md text-on-surface-variant">07/06/2026 18:45
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span
+                                        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gelo text-marinho font-label-sm text-label-sm border border-azul-claro border-opacity-50">
+                                        <span class="w-2 h-2 rounded-full bg-marinho"></span>
+                                        Devolvido
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script>
+        // Simple script to format current date nicely if needed, though static in prompt
+        const dateElement = document.getElementById('current-date');
+        const options = { day: 'numeric', month: 'long', year: 'numeric' };
+        const today = new Date('2026-06-08T12:00:00'); // Hardcoded to match prompt requested date
+        dateElement.textContent = today.toLocaleDateString('pt-BR', options);
+    </script>
+
+
+</body>
+
+</html>

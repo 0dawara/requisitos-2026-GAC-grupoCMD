@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <title>Confirmar Retirada - GAC</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#a6c8ff",
+                        "on-background": "#101d25",
+                        "primary": "#0037be",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "outline": "#747688",
+                        "on-secondary-fixed-variant": "#2d3aa4",
+                        "on-primary-fixed-variant": "#0036bb",
+                        "on-secondary-fixed": "#000964",
+                        "inverse-on-surface": "#e5f3ff",
+                        "surface-bright": "#f5faff",
+                        "inverse-surface": "#25323b",
+                        "primary-fixed": "#dde1ff",
+                        "surface-container-high": "#dceaf6",
+                        "surface-container": "#e2f0fc",
+                        "tertiary-fixed": "#d5e3ff",
+                        "gelo": "#E4F2FE",
+                        "on-primary-fixed": "#001354",
+                        "on-tertiary-fixed-variant": "#004786",
+                        "background": "#f5faff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#001c3b",
+                        "surface-container-low": "#eaf5ff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#142290",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#c9dcff",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#2b61a2",
+                        "surface-dim": "#cedce8",
+                        "on-primary-container": "#d3d9ff",
+                        "primary-container": "#004af7",
+                        "anil": "#004AF7",
+                        "surface-container-highest": "#d6e4f0",
+                        "surface-tint": "#0049f4",
+                        "secondary-container": "#8592ff",
+                        "on-surface-variant": "#434656",
+                        "azul-claro": "#87B7FE",
+                        "tertiary": "#014989",
+                        "surface": "#f5faff",
+                        "on-surface": "#101d25",
+                        "primary-fixed-dim": "#b8c4ff",
+                        "on-primary": "#ffffff",
+                        "marinho": "#132190",
+                        "inverse-primary": "#b8c4ff",
+                        "surface-variant": "#d6e4f0",
+                        "secondary-fixed-dim": "#bdc2ff",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#c3c5d9",
+                        "secondary": "#4753bd",
+                        "secondary-fixed": "#dfe0ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "32px",
+                        "margin-mobile": "16px",
+                        "container-max-width": "1280px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth scrolling and base setup */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Checkbox styling */
+        .term-checkbox:checked {
+            background-color: theme('colors.anil');
+            border-color: theme('colors.anil');
+        }
+
+        /* Subtle elevation for cards */
+        .card-elevation {
+            box-shadow: 0 4px 20px rgba(0, 74, 247, 0.05);
+        }
+
+        /* Safe area padding for mobile */
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom, 20px);
+        }
+
+        .pt-safe {
+            padding-top: env(safe-area-inset-top, 20px);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-gelo text-on-background min-h-screen flex flex-col font-body-md pt-safe">
+    <!-- Top Navigation (Transactional/Task-focused - Simplified Header) -->
+    <header class="bg-surface border-b border-azul-claro/20 sticky top-0 z-50 flex items-center px-4 h-16 w-full">
+        <button
+            class="p-2 -ml-2 text-primary hover:bg-gelo/50 rounded-full transition-colors flex items-center justify-center">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+        </button>
+        <h1 class="flex-1 text-center font-headline-md text-headline-md font-bold text-marinho mr-8">
+            Confirmar Retirada
+        </h1>
+    </header>
+    <!-- Main Content Canvas -->
+    <main class="flex-1 flex flex-col px-4 py-6 gap-6 w-full max-w-md mx-auto">
+        <!-- Resumo do Ativo Card -->
+        <section
+            class="bg-white rounded-xl p-5 card-elevation border border-azul-claro/20 flex flex-col gap-4 relative overflow-hidden">
+            <!-- Subtle Geometric Watermark -->
+            <div class="absolute -right-4 -top-4 w-24 h-24 bg-gelo rounded-full opacity-50 pointer-events-none"></div>
+            <h2 class="font-label-sm text-label-sm text-outline uppercase tracking-wider relative z-10">Resumo do Ativo
+            </h2>
+            <div class="flex items-start gap-4 relative z-10">
+                <div
+                    class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-anil shrink-0">
+                    <span class="material-symbols-outlined text-3xl"
+                        style="font-variation-settings: 'FILL' 0;">videocam</span>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <h3 class="font-headline-md text-headline-md !text-[18px] !leading-snug text-marinho font-semibold">
+                        Projetor Epson PowerLite</h3>
+                    <p class="font-body-md text-body-md !text-[14px] text-on-surface-variant">Patrimônio #0042</p>
+                </div>
+            </div>
+            <div class="h-[1px] w-full bg-azul-claro/20 my-1 relative z-10"></div>
+            <div class="flex flex-col gap-3 relative z-10">
+                <div class="flex justify-between items-center">
+                    <span class="font-body-md text-body-md text-on-surface-variant">Status</span>
+                    <span
+                        class="bg-[#E6F4EA] text-[#137333] font-label-sm text-label-sm px-2 py-1 rounded-full flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#137333]"></span>
+                        Disponível
+                    </span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="font-body-md text-body-md text-on-surface-variant">Sala de destino</span>
+                    <span class="font-label-md text-label-md text-marinho font-medium">Sala 204 — Bloco B</span>
+                </div>
+            </div>
+        </section>
+        <!-- Termo de Responsabilidade Card -->
+        <section class="bg-white rounded-xl p-5 card-elevation border border-azul-claro/20 flex flex-col gap-4">
+            <h2
+                class="font-headline-md text-headline-md !text-[18px] text-marinho font-semibold flex items-center gap-2">
+                <span class="material-symbols-outlined text-anil"
+                    style="font-variation-settings: 'FILL' 0;">description</span>
+                Termo de Responsabilidade
+            </h2>
+            <div class="bg-surface-container-lowest border border-surface-dim rounded-lg p-4 max-h-40 overflow-y-auto">
+                <p class="font-body-md text-body-md !text-[13px] text-on-surface-variant leading-relaxed">
+                    Declaro ter recebido o equipamento descrito acima em perfeitas condições de uso e funcionamento.
+                    Assumo a responsabilidade por sua guarda, conservação e correta utilização durante o período de
+                    locação, comprometendo-me a devolvê-lo nas mesmas condições em que foi entregue, na data e horário
+                    estipulados. Em caso de dano, perda ou roubo, comprometo-me a ressarcir a instituição pelos
+                    prejuízos causados, conforme normativas vigentes.
+                </p>
+            </div>
+            <label class="flex items-start gap-3 mt-2 cursor-pointer group">
+                <div class="relative flex items-center justify-center mt-0.5">
+                    <input
+                        class="term-checkbox peer appearance-none w-5 h-5 border-2 border-azul-claro rounded bg-white checked:bg-anil checked:border-anil transition-colors cursor-pointer"
+                        id="terms-checkbox" type="checkbox" />
+                    <span
+                        class="material-symbols-outlined absolute text-white text-[16px] pointer-events-none opacity-0 peer-checked:opacity-100 transition-opacity"
+                        style="font-variation-settings: 'FILL' 1;">check</span>
+                </div>
+                <span
+                    class="font-body-md text-body-md !text-[14px] text-marinho group-hover:text-primary transition-colors select-none">
+                    Li e aceito o Termo de Responsabilidade
+                </span>
+            </label>
+        </section>
+        <!-- Action Buttons (Bottom area) -->
+        <div class="mt-auto pt-8 flex flex-col gap-3 pb-safe">
+            <button
+                class="w-full h-12 rounded-lg bg-surface-dim text-on-surface-variant font-label-md text-label-md font-semibold transition-all duration-200 flex items-center justify-center"
+                disabled="" id="btn-confirm">
+                Confirmar Retirada
+            </button>
+            <button
+                class="w-full h-12 rounded-lg bg-transparent text-marinho border border-azul-claro/50 font-label-md text-label-md font-medium hover:bg-surface-container-high transition-colors flex items-center justify-center">
+                Cancelar
+            </button>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkbox = document.getElementById('terms-checkbox');
+            const confirmBtn = document.getElementById('btn-confirm');
+
+            // Enable/disable button based on checkbox
+            checkbox.addEventListener('change', (e) => {
+                if (e.target.checked) {
+                    confirmBtn.disabled = false;
+                    confirmBtn.classList.remove('bg-surface-dim', 'text-on-surface-variant');
+                    confirmBtn.classList.add('bg-anil', 'text-white', 'shadow-[0_4px_12px_rgba(0,74,247,0.2)]', 'hover:bg-primary');
+                } else {
+                    confirmBtn.disabled = true;
+                    confirmBtn.classList.add('bg-surface-dim', 'text-on-surface-variant');
+                    confirmBtn.classList.remove('bg-anil', 'text-white', 'shadow-[0_4px_12px_rgba(0,74,247,0.2)]', 'hover:bg-primary');
+                }
+            });
+
+            // Handle button click for micro-interaction
+            confirmBtn.addEventListener('click', function () {
+                if (!this.disabled) {
+                    this.innerHTML = '<span class="material-symbols-outlined animate-spin mr-2" style="font-variation-settings: \'FILL\' 0;">progress_activity</span> Processando...';
+                    this.classList.add('opacity-90');
+
+                    // Simulate loading state
+                    setTimeout(() => {
+                        this.innerHTML = '<span class="material-symbols-outlined mr-2" style="font-variation-settings: \'FILL\' 1;">check_circle</span> Retirada Confirmada';
+                        this.classList.remove('bg-anil', 'hover:bg-primary');
+                        this.classList.add('bg-[#137333]');
+                    }, 1500);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
